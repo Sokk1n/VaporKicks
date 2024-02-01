@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+	
+	<title>Vapor Kicks</title>
+</head>
+<body>
+   <header>
+    <div class="header-content">
+        <img src="logo.png" alt="Logo" class="logo"> 
+        <div class="text-content">
+            <h1>Vapor Kicks</h1>
+            <h4>COOL SHOES FOR YOU ALWAYS</h4>
+        </div>
+    </div>
+</header>
+
+    <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+	<a href="location.html">Location</a>
+    <div class="dropdown">
+        <button class="dropbtn">Products</button>
+        <div class="dropdown-content">
+            <div class="sub-dropdown">
+                <button class="sub-dropbtn">Shoes</button>
+                <div class="sub-dropdown-content">
+                    <a href="shoes-mens.html">Men's</a>
+                    <a href="shoes-womens.html">Women's</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="contact.html">Contact Us</a>
+    <a href="testimonials.html">Testimonies</a>
+    <a href="gallery.html">Gallery</a>
+	
+	<section class="PageName">
+		<div>
+			<h1>Testimonials</h1>
+		</div>
+	</section>
+
+   <!-- Testimonials Section -->
+    <section class="testm-container">
+        <!-- Testimonials Items -->
+        <div class="testm-item">
+            <img src="./Testimonials/1.png" alt="Testimonial" onclick="openLightbox('./Testimonials/1.png')">
+        </div>
+        <div class="testm-item">
+            <img src="./Testimonials/2.png" alt="Testimonial" onclick="openLightbox('./Testimonials/2.png')">
+        </div>
+		<div class="testm-item">
+            <img src="./Testimonials/3.png" alt="Testimonial" onclick="openLightbox('./Testimonials/3.png')">
+        </div>
+		<div class="testm-item">
+            <img src="./Testimonials/4.png" alt="Testimonial" onclick="openLightbox('./Testimonials/4.png')">
+        </div>
+		<div class="testm-item">
+            <img src="./Testimonials/5.png" alt="Testimonial" onclick="openLightbox('./Testimonials/5.png')">
+        </div>
+    </section>
+
+    <!-- Lightbox Container -->
+    <div class="lightbox" id="lightbox">
+        <span class="close-btn" onclick="closeLightbox()">×</span>
+        <img src="" alt="Lightbox Image" id="lightbox-img">
+    </div>
+
+    <script>
+        function openLightbox(imageSrc) {
+            document.getElementById('lightbox-img').src = imageSrc;
+            document.getElementById('lightbox').style.display = 'flex';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+    </script>
+
+    <!-- Add the Lightbox script link here -->
+    <script src="path/to/lightbox.js"></script>
+	
+	<section>
+	</section>
+		
+	<!-- Scroll to top button -->
+    <button id="goToTopBtn" onclick="scrollToTop()">Top</button>
+
+    <script>
+        // Function to scroll to the top of the page
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Show/hide the button based on scroll position
+        window.onscroll = function() {
+            showGoToTopButton();
+        };
+
+        function showGoToTopButton() {
+            var button = document.getElementById('goToTopBtn');
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                button.style.display = 'block';
+            } else {
+                button.style.display = 'none';
+            }
+        }
+    </script>
+
+    <footer>
+        &copy; 2024 Vapor Kicks. All rights reserved.
+    </footer>
+</body>
+</html>

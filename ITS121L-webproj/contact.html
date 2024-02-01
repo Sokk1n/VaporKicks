@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+	
+	<title>Vapor Kicks</title>
+</head>
+<body>
+   <header>
+    <div class="header-content">
+        <img src="logo.png" alt="Logo" class="logo"> 
+        <div class="text-content">
+            <h1>Vapor Kicks</h1>
+            <h4>COOL SHOES FOR YOU ALWAYS</h4>
+        </div>
+    </div>
+</header>
+
+    <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+	<a href="location.html">Location</a>
+    <div class="dropdown">
+        <button class="dropbtn">Products</button>
+        <div class="dropdown-content">
+            <div class="sub-dropdown">
+                <button class="sub-dropbtn">Shoes</button>
+                <div class="sub-dropdown-content">
+                    <a href="shoes-mens.html">Men's</a>
+                    <a href="shoes-womens.html">Women's</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="contact.html">Contact Us</a>
+    <a href="testimonies.html">Testimonies</a>
+    <a href="gallery.html">Gallery</a>
+	
+	<section class="PageName">
+		<div>
+			<h1>Contact Us</h1>
+		</div>
+	</section>
+
+        <section class="contact-container">
+        <!-- Contact form -->
+        <form action="jmmjacala@mymail.mapua.edu.ph" method="post" enctype="text/plain" class="contact-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+			
+            <div class="form-group">
+                <label for="num">Phone Number:</label>
+                <input type="number" id="num" name="num" required>
+            </div>
+			
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" required>
+            </div>
+
+            <div class="form-group contact-method">
+                <label>Preferred Contact Method:</label>
+                <label for="email">Email</label>
+                <input type="radio" id="email" name="contactMethod" value="email" checked>
+                <label for="phone">Phone</label>
+                <input type="radio" id="phone" name="contactMethod" value="phone">
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <select id="subject" name="subject">
+                    <option value="general">General Inquiry</option>
+                    <option value="product">Product Information</option>
+                    <option value="support">Customer Support</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+
+            <div class="form-buttons">
+                <button type="submit" name="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </section>
+
+	<!-- Scroll to top button -->
+    <button id="goToTopBtn" onclick="scrollToTop()">Top</button>
+
+    <script>
+        // Function to scroll to the top of the page
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Show/hide the button based on scroll position
+        window.onscroll = function() {
+            showGoToTopButton();
+        };
+
+        function showGoToTopButton() {
+            var button = document.getElementById('goToTopBtn');
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                button.style.display = 'block';
+            } else {
+                button.style.display = 'none';
+            }
+        }
+    </script>	
+
+    <footer>
+        &copy; 2024 Vapor Kicks. All rights reserved.
+    </footer>
+</body>
+</html>

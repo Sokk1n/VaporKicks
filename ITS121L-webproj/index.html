@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Vapor Kicks</title>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="logo.png" alt="Logo" class="logo"> 
+            <div class="text-content">
+                <h1>Vapor Kicks</h1>
+                <h4>COOL SHOES FOR YOU ALWAYS</h4>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+	<a href="location.html">Location</a>
+        <div class="dropdown">
+            <button class="dropbtn">Products</button>
+            <div class="dropdown-content">
+                <div class="sub-dropdown">
+                    <button class="sub-dropbtn">Shoes</button>
+                    <div class="sub-dropdown-content">
+                        <a href="shoes-mens.html">Men's</a>
+                        <a href="shoes-womens.html">Women's</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="contact.html">Contact Us</a>
+        <a href="testimonies.html">Testimonies</a>
+        <a href="gallery.html">Gallery</a>
+    </nav>
+
+    <section>
+        <div class="section-content">
+            <img src="img1.png" alt="Banner">       
+        </div>
+    </section>
+
+    <section class="home">
+        <div>
+            <h2>STEP INTO STYLE: UNLEASHING CREATIVITY WITH YOUR FOOTWEAR</h2>
+            <p>
+                Welcome to our exclusive online platform, where style meets unbeatable 
+                deals on your favorite footwear! Our site specializes in reselling 
+                highly coveted and hard-to-find footwear, ensuring that you have access 
+                to the latest and most exclusive releases. Immerse yourself in a world 
+                where every step you take is a statement of individuality and flair. Our 
+                amazing deals and promotions make it easier than ever to snag those 
+                sought-after pairs without breaking the bank. We believe that your choice 
+                of footwear is a reflection of your unique style, and we are here to 
+                empower you to express yourself creatively. By offering these exclusive 
+                designs at affordable prices, we aim to enhance your fashion journey and 
+                inspire a more imaginative and confident version of yourself. Step into a 
+                realm of unparalleled style and discover how our limited edition footwear 
+                can not only elevate your wardrobe but also contribute to the evolution of 
+                your personal style. Unleash the creativity within you with every step you 
+                take!
+            </p>
+        </div>
+    </section>
+
+    <!-- Scroll to top button -->
+    <button id="goToTopBtn" onclick="scrollToTop()">Top</button>
+
+    <script>
+        // Function to scroll to the top of the page
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Show/hide the button based on scroll position
+        window.onscroll = function() {
+            showGoToTopButton();
+        };
+
+        function showGoToTopButton() {
+            var button = document.getElementById('goToTopBtn');
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                button.style.display = 'block';
+            } else {
+                button.style.display = 'none';
+            }
+        }
+    </script>
+
+    <footer>
+        &copy; 2024 Vapor Kicks. All rights reserved.
+    </footer>
+</body>
+</html>
